@@ -15,4 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "BitHub"
 include(":app")
- 
+include(":features:home:data")
+include(":features:home:domain")
+include(":features:home:ui")
