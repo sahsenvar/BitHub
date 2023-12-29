@@ -1,4 +1,4 @@
-package com.sahansenvar.bithub
+package com.sahansenvar.bithub.ui
 
 import androidx.lifecycle.ViewModel
 
