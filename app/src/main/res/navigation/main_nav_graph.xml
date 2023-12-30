@@ -9,5 +9,10 @@
         android:id="@+id/splashFragment"
         android:name="com.sahansenvar.bithub.ui.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_home_nav_graph"
+            app:destination="@id/home_nav_graph" />
+    </fragment>
+    <include app:graph="@navigation/home_nav_graph" />
 </navigation>
