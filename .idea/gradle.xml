@@ -20,11 +20,11 @@
             <option value="$PROJECT_DIR$/features/home" />
             <option value="$PROJECT_DIR$/features/home/data" />
             <option value="$PROJECT_DIR$/features/home/domain" />
-            <option value="$PROJECT_DIR$/features/home/ui" />
+            <option value="$PROJECT_DIR$/features/home/presentation" />
             <option value="$PROJECT_DIR$/features/loginregister" />
             <option value="$PROJECT_DIR$/features/loginregister/data" />
             <option value="$PROJECT_DIR$/features/loginregister/domain" />
-            <option value="$PROJECT_DIR$/features/loginregister/ui" />
+            <option value="$PROJECT_DIR$/features/loginregister/presentation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
