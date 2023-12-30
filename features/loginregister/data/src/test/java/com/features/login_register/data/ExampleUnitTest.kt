@@ -1,4 +1,4 @@
-package com.features.loginregister.data
+package com.features.login_register.data
 
 import org.junit.Test
 

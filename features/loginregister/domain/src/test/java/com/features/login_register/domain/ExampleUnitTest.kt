@@ -1,4 +1,4 @@
-package com.features.loginregister.domain
+package com.features.login_register.domain
 
 import org.junit.Test
 
