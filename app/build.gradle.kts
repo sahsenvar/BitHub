@@ -42,8 +42,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":features:loginregister:ui"))
-    implementation(project(":features:home:ui"))
+    implementation(project(":features:loginregister:presentation"))
+    implementation(project(":features:home:presentation"))
     implementation(project(":core:common"))
 
     implementation("androidx.core:core-ktx:1.12.0")
