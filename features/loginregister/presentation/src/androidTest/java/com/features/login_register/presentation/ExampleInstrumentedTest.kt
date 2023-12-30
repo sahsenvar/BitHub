@@ -1,4 +1,4 @@
-package com.features.login_register.ui
+package com.features.login_register.presentation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

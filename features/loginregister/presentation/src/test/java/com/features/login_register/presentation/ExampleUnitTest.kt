@@ -1,4 +1,4 @@
-package com.features.login_register.ui
+package com.features.login_register.presentation
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.features.login_register.ui.register_screen
+package com.features.login_register.presentation.ui.register_screen
 
 class RegisterIntent {
 }
