@@ -1,4 +1,4 @@
-package com.features.presentation.ui
+package com.features.presentation
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
