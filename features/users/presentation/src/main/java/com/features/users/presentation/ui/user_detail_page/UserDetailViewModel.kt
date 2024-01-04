@@ -7,11 +7,9 @@ import com.core.common.model.onError
 import com.core.common.model.onLoading
 import com.core.common.model.onSuccess
 import com.features.users.domain.model.UserDetailDomainModel
-import com.features.users.domain.model.UserDomainModel
 import com.features.users.domain.usecase.ChangeFavoriteStatusUseCase
 import com.features.users.domain.usecase.GetUserDetailUseCase
 import kotlinx.coroutines.launch
-import java.lang.NullPointerException
 
 class UserDetailViewModel(
     private val getUserDetailUseCase: GetUserDetailUseCase,

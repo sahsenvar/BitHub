@@ -9,7 +9,6 @@ import coil.load
 import com.core.common.R
 import com.core.common.base.BaseFragment
 import com.core.common.base.Toolbar
-import com.core.common.enums.ToolbarType
 import com.features.users.presentation.databinding.FragmentUserDetailBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
