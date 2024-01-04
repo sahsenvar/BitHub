@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_register_nav_graph"
+    app:startDestination="@id/loginRegisterFragment">
+
+    <fragment
+        android:id="@+id/loginRegisterFragment"
+        android:name="com.features.login_register.presentation.ui.login_register_screen.LoginRegisterFragment"
+        android:label="fragment_login_register"
+        tools:layout="@layout/fragment_login_register" >
+        <action
+            android:id="@+id/to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.features.login_register.presentation.ui.login_screen.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <deepLink
+            android:id = "@+id/toLogin"
+            app:uri="bithub://login.feature.com" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.features.login_register.presentation.ui.register_screen.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register"/>
+</navigation>

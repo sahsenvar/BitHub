@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nothing_to_see_here">Nothing to see here</string>
+    <string name="user">User</string>
+    <string name="go_to_profile">go to profile</string>
+    <string name="repos">Repos</string>
+    <string name="following">Following</string>
+    <string name="follower">Follower</string>
+    <string name="statistics">Statistics</string>
+    <string name="about_my_biographia">About my biographia</string>
+    <string name="bio">Bio</string>
+    <string name="sahsenvar">\@sahsenvar</string>
+</resources>

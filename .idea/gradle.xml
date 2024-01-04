@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="gradleJvm" value="corretto-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/benchmark" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/api" />
+            <option value="$PROJECT_DIR$/core/api/local" />
+            <option value="$PROJECT_DIR$/core/api/remote" />
+            <option value="$PROJECT_DIR$/core/common" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/home" />
+            <option value="$PROJECT_DIR$/features/home/data" />
+            <option value="$PROJECT_DIR$/features/home/domain" />
+            <option value="$PROJECT_DIR$/features/home/presentation" />
+            <option value="$PROJECT_DIR$/features/loginregister" />
+            <option value="$PROJECT_DIR$/features/loginregister/data" />
+            <option value="$PROJECT_DIR$/features/loginregister/domain" />
+            <option value="$PROJECT_DIR$/features/loginregister/presentation" />
+            <option value="$PROJECT_DIR$/features/users" />
+            <option value="$PROJECT_DIR$/features/users/data" />
+            <option value="$PROJECT_DIR$/features/users/domain" />
+            <option value="$PROJECT_DIR$/features/users/presentation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
