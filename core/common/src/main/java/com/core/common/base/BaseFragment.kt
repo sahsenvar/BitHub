@@ -1,22 +1,23 @@
 package com.core.common.base
 
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
-import com.core.common.interfaces.UiComponentSetter
 import com.core.common.enums.ToolbarType
 import com.core.common.interfaces.StateObserver
+import com.core.common.interfaces.UiComponentSetter
 import kotlinx.coroutines.launch
 import java.lang.reflect.ParameterizedType
-import android.content.DialogInterface
-import androidx.appcompat.app.AlertDialog
-import android.text.method.ScrollingMovementMethod
-import android.widget.TextView
+
 abstract class BaseFragment<
         VB : ViewBinding,
         STATE : BaseState,
