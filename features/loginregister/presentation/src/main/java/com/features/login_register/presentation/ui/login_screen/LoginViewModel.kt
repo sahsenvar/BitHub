@@ -1,21 +1,48 @@
 package com.features.login_register.presentation.ui.login_screen
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.flow.receiveAsFlow
+import PreferenceHelper
+import androidx.lifecycle.viewModelScope
+import com.core.common.base.BaseViewModel
+import com.core.common.model.onError
+import com.core.common.model.onLoading
+import com.core.common.model.onSuccess
+import com.features.login_register.domain.usecase.GetUserAccessTokenUseCase
+import kotlinx.coroutines.launch
 
-class LoginViewModel() : ViewModel() {
+class LoginViewModel(
+    private val getUserAccessTokenUseCase: GetUserAccessTokenUseCase,
+    private val preferenceHelper: PreferenceHelper
+) : BaseViewModel<LoginState, LoginIntent>() {
+    override suspend fun handleIntent(intent: LoginIntent) {
+        when (intent) {
+            is LoginIntent.OpenToLoginWebView -> {}
 
-    private val _events = Channel<LoginState>(Channel.UNLIMITED)
-    val events = _events.receiveAsFlow()
+            is LoginIntent.DirectToHomePage -> {
+                _state.send(LoginState.NavigationToHomePage)
+            }
 
-    private val _loginResult = MutableLiveData<LoginIntent>()
-    val loginResult: LiveData<LoginIntent> = _loginResult
-
-    fun directToLoginWebView(username: String, password: String) {
-
+            is LoginIntent.GetAccessToken -> {
+                if (intent.codeQuery.isNullOrBlank())
+                    _state.send(LoginState.Exception("response code boş geldi", null ))
+                else
+                    getAccessToken(intent.codeQuery)
+            }
+        }
     }
 
+
+    private fun getAccessToken(codeQuery: String) = viewModelScope.launch {
+        getUserAccessTokenUseCase.invoke(query = codeQuery).collect{ result ->
+            result.onSuccess {
+                if (it?.refreshToken.isNullOrBlank() && it?.accessToken.isNullOrBlank())
+                    return@onSuccess _state.send(LoginState.Exception("access token boş geldi!"))
+                preferenceHelper.upsertUserToken(it!!.accessToken!!)
+                _state.send(LoginState.NavigationToHomePage)
+            }.onLoading {
+                _state.send(LoginState.Loading(it))
+            }.onError {
+                _state.send(LoginState.Exception("Access token alınamadı", it.localizedMessage))
+            }
+        }
+    }
 }

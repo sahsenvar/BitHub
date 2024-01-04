@@ -1,10 +1,9 @@
 package com.features.login_register.presentation.ui.login_screen
 
-/**
- * Data validation state of the login form.
- */
-data class LoginState(
-    val usernameError: Int? = null,
-    val passwordError: Int? = null,
-    val isDataValid: Boolean = false
-)
+import com.core.common.base.BaseState
+
+sealed class LoginState: BaseState() {
+    data class Loading(val enable: Boolean) : LoginState()
+    data object NavigationToHomePage: LoginState()
+    data class Exception(val message: String, val detail: String?) : LoginState()
+}
