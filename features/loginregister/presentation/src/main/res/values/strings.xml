@@ -8,4 +8,6 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="register_fragment">register fragment</string>
+    <string name="login_via_github">Login via Github</string>
 </resources>
