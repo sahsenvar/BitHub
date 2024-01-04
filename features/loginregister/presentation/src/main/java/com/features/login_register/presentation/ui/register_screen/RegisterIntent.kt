@@ -1,4 +1,6 @@
 package com.features.login_register.presentation.ui.register_screen
 
-class RegisterIntent {
+import com.core.common.base.BaseIntent
+
+sealed class RegisterIntent: BaseIntent() {
 }

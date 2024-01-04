@@ -1,32 +1,26 @@
 package com.features.login_register.presentation.ui.register_screen
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.features.loginregister.ui.R
+import com.core.common.base.BaseFragment
+import com.core.common.base.Toolbar
+import com.features.loginregister.ui.databinding.FragmentRegisterBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class RegisterFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = RegisterFragment()
+class RegisterFragment : BaseFragment<FragmentRegisterBinding, RegisterState, RegisterIntent, RegisterViewModel>() {
+    override val viewModel: RegisterViewModel by viewModel()
+    override val toolbar = Toolbar("Register")
+    override fun onCreationFinished() {
     }
 
-    private lateinit var viewModel: RegisterViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_register, container, false)
+    override fun initListeners() {
+    }
+    override suspend fun observeState(state: RegisterState) {
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+
+
+
+
+
+
 
 }

@@ -1,4 +1,6 @@
 package com.features.login_register.presentation.ui.register_screen
 
-class RegisterState {
+import com.core.common.base.BaseState
+
+sealed class RegisterState : BaseState() {
 }
