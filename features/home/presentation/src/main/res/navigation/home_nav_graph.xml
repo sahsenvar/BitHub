@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav_graph"
     app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.features.presentation.ui.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.features.home.presentation.ui.home_screen.HomeFragment"
+        android:label="HomeFragment">
+        <deepLink
+            android:id ="@+id/toHome"
+            app:uri="bithub://home.feature.com"/>
+    </fragment>
 </navigation>
