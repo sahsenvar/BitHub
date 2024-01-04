@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.features.login_register.ui.register_screen.RegisterFragment">
+    tools:context="com.features.login_register.presentation.ui.register_screen.RegisterFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:text="@string/register_fragment" />
 
 </FrameLayout>

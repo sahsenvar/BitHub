@@ -25,7 +25,8 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/baseline_favorite" />
+                android:src="@drawable/baseline_favorite"
+                android:contentDescription="@null" />
         </androidx.cardview.widget.CardView>
 
     </FrameLayout>
@@ -38,7 +39,7 @@
         android:layout_marginStart="160dp"
         android:layout_marginTop="80dp"
         android:gravity="center"
-        android:text="\@sahsenvar"
+        android:text="@string/sahsenvar"
         android:textColor="@color/cardview_light_background"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -64,8 +65,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:gravity="start"
-                android:text="Bio"
-                android:textSize="24dp"
+                android:text="@string/bio"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
@@ -81,7 +82,7 @@
                     android:gravity="start"
                     android:maxHeight="200dp"
                     android:minHeight="100dp"
-                    android:text="About my biographia" />
+                    android:text="@string/about_my_biographia" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -90,8 +91,8 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
                 android:gravity="start"
-                android:text="Statistics"
-                android:textSize="24dp"
+                android:text="@string/statistics"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
@@ -111,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:gravity="center"
-                        android:text="Follower"
+                        android:text="@string/follower"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -120,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:gravity="center"
-                        android:text="Following"
+                        android:text="@string/following"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -129,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_columnWeight="1"
                         android:gravity="center"
-                        android:text="Repos"
+                        android:text="@string/repos"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -177,7 +178,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:background="#0266d6"
-            android:text="profiline git"
+            android:text="@string/go_to_profile"
             android:textColor="@color/cardview_light_background"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -202,7 +203,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"
             android:elevation="10dp"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@null" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -211,7 +213,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="110dp"
-        android:text="User"
+        android:text="@string/user"
         android:textColor="@color/cardview_light_background"
         android:textSize="18sp" />
 

@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.features.login_register.presentation.ui.login_resgister_screen.LoginRegisterFragment">
+    tools:context="com.features.login_register.presentation.ui.login_register_screen.LoginRegisterFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
 
+    <Button
+        android:id="@+id/auth_via_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_via_github"
+        android:layout_gravity="center"/>
 </FrameLayout>

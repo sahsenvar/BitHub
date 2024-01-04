@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Seçili ikon -->
+    <item android:drawable="@drawable/ic_users_filled" android:color="@color/githubBlue" android:state_checked="true" />
+    <!-- Seçilmemiş ikon -->
+    <item android:drawable="@drawable/ic_users"  android:color="@color/githubGray1" android:state_checked="false"/>
+</selector>
