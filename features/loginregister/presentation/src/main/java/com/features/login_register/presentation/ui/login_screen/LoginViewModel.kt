@@ -35,7 +35,7 @@ class LoginViewModel(
         getUserAccessTokenUseCase.invoke(query = codeQuery).collect{ result ->
             result.onSuccess {
                 if (it?.refreshToken.isNullOrBlank() && it?.accessToken.isNullOrBlank())
-                    return@onSuccess _state.send(LoginState.Exception("access token boş geldi!"))
+                    return@onSuccess _state.send(LoginState.Exception("access token boş geldi!", null))
                 preferenceHelper.upsertUserToken(it!!.accessToken!!)
                 _state.send(LoginState.NavigationToHomePage)
             }.onLoading {
